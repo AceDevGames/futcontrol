@@ -38,7 +38,7 @@
     </div>
     <div class="card-footer">
         <a href="/times/novo" class="btn btn-sm btn-primary" role="button">Novo time</a>
-        <!--a href="/times/exportartimes" class="btn btn-sm btn-success" role="button">Exportar times</a-->
+        <a href="/times/exportartimes" class="btn btn-sm btn-success" role="button">Exportar times</a>
 
     </div>
 </div>

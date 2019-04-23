@@ -39,7 +39,7 @@ class ControladorTime extends Controller
     public function store(Request $request)
     {
         $tim = new Time();
-        $tim->nome = $request->input('nomeTimenomeTime');
+        $tim->nome = $request->input('nomeTime');
         $tim->fundacao = $request->input('fundacaoTime');
         $tim->presidente = $request->input('presidenteTime');
         $tim->estadio = $request->input('estadioTime');
@@ -118,13 +118,13 @@ class ControladorTime extends Controller
 
 
         $csvExporter = new \Laracsv\Export();
-        $csvExporter->build($jog, ['Nome', 'Idade','Cidade','Salário','Posição'])->download('Jogadores.csv');
+        $csvExporter->build($jog, ['Nome', 'Idade','Cidade','Salario','Posicao'])->download('Jogadores.csv');
 
     }public function exportTimesCSV(){
 
-        $time = Time::all();
+        $time = Time::get();
         $csvExporter = new \Laracsv\Export();
-        $csvExporter->build($time, ['Nome', 'Fundação','Presidente','Estádio','Cidade'])->download('Times.csv');
+        $csvExporter->build($time, ['Nome', 'Fundacao','Presidente','Estadio','Cidade'])->download('Times.csv');
 
     }
 }
